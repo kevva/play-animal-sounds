@@ -12,4 +12,4 @@ meow({
 	].join('\n')
 });
 
-playAnimalSounds();
+playAnimalSounds(process.argv.slice(2)[0]);
