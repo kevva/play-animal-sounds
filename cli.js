@@ -6,9 +6,12 @@ var meow = require('meow');
 
 meow({
 	help: [
-		'Example',
+		'Examples',
 		'  $ play-animal-sounds',
-		'  *animal sound*'
+		'  *animal sound*',
+		'',
+		'  $ play-animal-sounds cat',
+		'  *meow*'
 	].join('\n')
 });
 

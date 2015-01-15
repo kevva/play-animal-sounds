@@ -9,6 +9,7 @@ var unique = require('unique-random');
 /**
  * Play animal sounds
  *
+ * @param {String} animal
  * @api public
  */
 

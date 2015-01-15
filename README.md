@@ -8,7 +8,7 @@
 $ npm install --save play-animal-sounds
 ```
 
-On Debian/Ubuntu, the [ALSA](http://www.alsa-project.org/) backend is selected by default, so be sure to have the `alsa.h` header file in place:
+On Debian/Ubuntu, the [ALSA](http://www.alsa-project.org/) backend is used by default, so be sure to have the `alsa.h` header file in place:
 
 ```sh
 $ sudo apt-get install libasound2-dev
@@ -21,6 +21,9 @@ var playAnimalSounds = require('play-animal-sounds');
 
 playAnimalSounds();
 //=> *animal sound*
+
+playAnimalSounds('cat');
+//=> *meow*
 ```
 
 ## CLI
@@ -32,9 +35,12 @@ $ npm install --global play-animal-sounds
 ```sh
 $ play-animal-sounds --help
 
-Example
+Examples
   $ play-animal-sounds
   *animal sound*
+
+  $ play-animal-sounds cat
+  *meow*
 ```
 
 ## License
