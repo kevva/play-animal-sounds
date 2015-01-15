@@ -8,7 +8,7 @@
 $ npm install --save play-animal-sounds
 ```
 
-On Debian/Ubuntu, the ALSA backend is selected by default, so be sure to have the alsa.h header file in place:
+On Debian/Ubuntu, the [ALSA](http://www.alsa-project.org/) backend is selected by default, so be sure to have the `alsa.h` header file in place:
 
 ```sh
 $ sudo apt-get install libasound2-dev
