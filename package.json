@@ -1,0 +1,37 @@
+{
+  "name": "play-animal-sounds",
+  "version": "1.0.0",
+  "description": "Play animal sounds",
+  "license": "MIT",
+  "repository": "kevva/play-animal-sounds",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "animal-sounds": "cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "cli.js",
+    "index.js",
+    "sounds.json"
+  ],
+  "keywords": [],
+  "dependencies": {
+    "got": "^2.3.0",
+    "lame": "^1.1.2",
+    "meow": "^2.1.0",
+    "speaker": "^0.2.2",
+    "unique-random": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
