@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "bin": {
-    "animal-sounds": "cli.js"
+    "play-animal-sounds": "cli.js"
   },
   "scripts": {
     "test": "node test.js"
