@@ -25,10 +25,8 @@
   ],
   "keywords": [],
   "dependencies": {
-    "got": "^2.3.0",
-    "lame": "^1.1.2",
     "meow": "^2.1.0",
-    "speaker": "^0.2.2",
+    "player": "^0.3.0",
     "unique-random": "^1.0.0"
   },
   "devDependencies": {

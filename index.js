@@ -1,9 +1,7 @@
 'use strict';
 
-var got = require('got');
-var Lame = require('lame');
 var sounds = require('./sounds.json');
-var Speaker = require('speaker');
+var Player = require('player');
 var unique = require('unique-random');
 
 /**
@@ -14,7 +12,6 @@ var unique = require('unique-random');
  */
 
 module.exports = function (animal) {
-	var decoder = new Lame.Decoder();
 	var sound = unique(0, sounds.length - 1)();
 
 	if (animal) {
@@ -25,9 +22,5 @@ module.exports = function (animal) {
 		sound = unique(0, sounds.length - 1)();
 	}
 
-	decoder.on('format', function (format) {
-		this.pipe(new Speaker(format));
-	});
-
-	got(sounds[sound]).pipe(decoder);
+	new Player(sounds[sound]).play();
 };
