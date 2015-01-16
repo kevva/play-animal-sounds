@@ -19,7 +19,7 @@ module.exports = function (animal) {
 
 	if (animal) {
 		sounds = sounds.filter(function (el) {
-			return new RegExp(animal, 'gi').test(el);
+			return new RegExp('\\b' + animal + '[\\s_-]', 'gi').test(el);
 		});
 
 		sound = unique(0, sounds.length - 1)();
