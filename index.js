@@ -22,5 +22,5 @@ module.exports = function (animal) {
 		sound = unique(0, sounds.length - 1)();
 	}
 
-	new Player(sounds[sound]).play();
+	new Player(sounds[sound], { stream: true }).play();
 };
