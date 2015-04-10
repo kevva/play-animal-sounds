@@ -1,18 +1,18 @@
 'use strict';
 
-var sounds = require('./sounds.json');
 var Player = require('player');
-var unique = require('unique-random');
+var uniqueRandom = require('unique-random');
+var sounds = require('./sounds.json');
 
 module.exports = function (animal) {
-	var sound = unique(0, sounds.length - 1)();
+	var sound = uniqueRandom(0, sounds.length - 1)();
 
 	if (animal) {
 		sounds = sounds.filter(function (el) {
 			return new RegExp(animal, 'i').test(el);
 		});
 
-		sound = unique(0, sounds.length - 1)();
+		sound = uniqueRandom(0, sounds.length - 1)();
 	}
 
 	new Player(sounds[sound], {stream: true}).play();

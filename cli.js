@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-var playAnimalSounds = require('./');
 var meow = require('meow');
+var playAnimalSounds = require('./');
 
 meow({
 	help: [
