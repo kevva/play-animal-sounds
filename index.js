@@ -1,5 +1,4 @@
 'use strict';
-
 var Player = require('player');
 var uniqueRandom = require('unique-random');
 var sounds = require('./sounds.json');

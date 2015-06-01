@@ -31,11 +31,11 @@ playAnimalSounds('cat');
 
 ## CLI
 
-```sh
+```
 $ npm install --global play-animal-sounds
 ```
 
-```sh
+```
 $ play-animal-sounds --help
 
   Examples
