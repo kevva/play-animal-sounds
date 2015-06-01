@@ -30,8 +30,8 @@
     "sounds"
   ],
   "dependencies": {
-    "meow": "^2.1.0",
-    "player": "^0.3.0",
+    "meow": "^3.1.0",
+    "player": "^0.5.0",
     "unique-random": "^1.0.0"
   },
   "devDependencies": {

@@ -14,5 +14,7 @@ module.exports = function (animal) {
 		sound = uniqueRandom(0, sounds.length - 1)();
 	}
 
-	new Player(sounds[sound], {stream: true}).play();
+	new Player(sounds[sound])
+		.enable('stream')
+		.play();
 };

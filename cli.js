@@ -3,7 +3,7 @@
 var meow = require('meow');
 var playAnimalSounds = require('./');
 
-meow({
+var cli = meow({
 	help: [
 		'Examples',
 		'  $ play-animal-sounds',
@@ -14,4 +14,4 @@ meow({
 	].join('\n')
 });
 
-playAnimalSounds(process.argv.slice(2)[0]);
+playAnimalSounds(cli.input.length ? cli.input[0] : null);
