@@ -11,7 +11,7 @@ var cli = meow({
 		'',
 		'  $ play-animal-sounds cat',
 		'  *meow*'
-	].join('\n')
+	]
 });
 
 playAnimalSounds(cli.input.length ? cli.input[0] : null);
