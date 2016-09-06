@@ -19,13 +19,15 @@ $ sudo apt-get install libasound2-dev
 ## Usage
 
 ```js
-var playAnimalSounds = require('play-animal-sounds');
+const playAnimalSounds = require('play-animal-sounds');
 
-playAnimalSounds();
-//=> *animal sound*
+playAnimalSounds().then(() => {
+	console.log('animal sound played');
+});
 
-playAnimalSounds('cat');
-//=> *meow*
+playAnimalSounds('cat').then(() => {
+	console.log('cat sound played');
+});
 ```
 
 
@@ -38,12 +40,9 @@ $ npm install --global play-animal-sounds
 ```
 $ play-animal-sounds --help
 
-  Examples
+  Example
     $ play-animal-sounds
-    *animal sound*
-
     $ play-animal-sounds cat
-    *meow*
 ```
 
 

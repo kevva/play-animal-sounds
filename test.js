@@ -1,7 +1,7 @@
 'use strict';
-var test = require('ava');
+const test = require('ava');
 
-test('play animal sound', function (t) {
+test('play animal sound', t => {
 	t.assert(true);
 	t.end();
 });

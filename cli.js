@@ -1,17 +1,15 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var playAnimalSounds = require('./');
+const meow = require('meow');
+const playAnimalSounds = require('./');
 
-var cli = meow({
-	help: [
-		'Examples',
-		'  $ play-animal-sounds',
-		'  *animal sound*',
-		'',
-		'  $ play-animal-sounds cat',
-		'  *meow*'
-	]
+const cli = meow(`
+	Example
+	  $ play-animal-sounds
+	  $ play-animal-sounds cat
+`);
+
+playAnimalSounds(cli.input[0]).catch(err => {
+	console.error(err.message);
+	process.exit(1);
 });
-
-playAnimalSounds(cli.input.length ? cli.input[0] : null);
