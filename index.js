@@ -28,6 +28,11 @@ const playSound = sound => new Promise((resolve, reject) => {
 module.exports = animal => {
 	const config = new Conf();
 	const sound = randomItem(animal ? sounds.filter(x => new RegExp(animal, 'i').test(x)) : sounds);
+
+	if (!sound) {
+		return Promise.reject(new Error('Sound not found'));
+	}
+
 	const name = filenamify(path.basename(sound));
 	const dest = path.join(xdgBasedir.data, name);
 	const cached = config.get(name);
